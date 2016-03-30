@@ -1,0 +1,29 @@
+@import "../../node_modules/zhilizhili-ui/elements/normalize/sass/normalize";
+
+@import "import";
+@import "color";
+@import "utils";
+@import "variable";
+
+// import global element
+@import "../../node_modules/zhilizhili-ui/elements/utility/sass/position";
+@import "../../node_modules/zhilizhili-ui/elements/utility/sass/display";
+@import "../../node_modules/zhilizhili-ui/elements/utility/sass/text-align";
+@import "../../node_modules/zhilizhili-ui/elements/utility/sass/float";
+@import "../../node_modules/zhilizhili-ui/elements/utility/sass/overflow";
+@import "../../node_modules/zhilizhili-ui/elements/utility/sass/position";
+@import "../../node_modules/zhilizhili-ui/elements/utility/sass/length";
+
+// use global element
+@include use-utility-position-with-media("sm");
+@include use-utility-block-center-with-media("sm");
+@include com-zhilizhili-zhilizhiliui-elements-utility-display-with-media("sm");
+@include com-zhilizhili-zhilizhiliui-utility-text-align-with-media("sm");
+@include com-zhilizhili-zhilizhiliui-utility-length-with-media("sm");
+@include com-zhilizhili-use-utility-float-with-media("sm");
+@include com-zhilizhili-use-utility-overflow-with-media("sm");
+
+// your mixin
+
+@include use-border-box();
+@include reset-body-marigin();

@@ -1,0 +1,39 @@
+@mixin com-zhilizhili-weixin-padding-gen($ns, $media, $level: "300", $value: 24, $list: ("left", "top", "right", "bottom", "horizontal", "vertical"), $unit: px) {
+    @each $key in $list {
+       @if $key == "horizontal" {
+           .#{$ns}-#{$media}-padding-#{$key}-#{$level} {
+               padding-left: #{$value}#{$unit};
+               padding-right: #{$value}#{$unit};
+           }
+       } @else if $key == "vertical" {
+           .#{$ns}-#{$media}-padding-#{$key}-#{$level} {
+               padding-top: #{$value}#{$unit};
+               padding-bottom: #{$value}#{$unit};
+           }
+       } @else {
+           .#{$ns}-#{$media}-padding-#{$key}-#{$level} {
+               padding-#{$key}: #{$value}#{$unit};
+           }
+       }
+    }
+}
+
+@mixin com-zhilizhili-weixin-margin-gen($ns, $media, $level: "300", $value: 24, $list: ("left", "top", "right", "bottom", "horizontal", "vertical"), $unit: px) {
+  @each $key in $list {
+    @if $key == "horizontal" {
+      .#{$ns}-#{$media}-margin-#{$key}-#{$level} {
+        margin-left: #{$value}#{$unit};
+        margin-right: #{$value}#{$unit};
+      }
+    } @else if $key == "vertical" {
+      .#{$ns}-#{$media}-margin-#{$key}-#{$level} {
+        margin-top: #{$value}#{$unit};
+        margin-bottom: #{$value}#{$unit};
+      }
+    } @else {
+      .#{$ns}-#{$media}-margin-#{$key}-#{$level} {
+        margin-#{$key}: #{$value}#{$unit};
+      }
+    }
+  }
+}

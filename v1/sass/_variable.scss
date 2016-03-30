@@ -1,0 +1,8 @@
+$com-zhilizhili-weixin-whatsapp-sms: (
+    "height": 34px,
+) !global;
+
+@function get-com-zhilizhili-weixin-whatsapp-sms-global-variable($args...) {
+    @return map-deep-get($com-zhilizhili-weixin-whatsapp-sms, $args...);
+}
+

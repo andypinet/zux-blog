@@ -2,7 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>New ThinkJS Application</title>
+    <link rel="stylesheet" href="/static/app/css/index.css">
 <style>
 *{padding: 0;margin: 0;font-size: 16px;line-height: 20px;font-family: arial;}
 a, a:visited{color:#337ab7;text-decoration: none;}
@@ -18,13 +21,23 @@ code{  padding: 2px 4px;font-size: 90%;color: #c7254e;background-color: #f9f2f4;
 .list .item h2{font-size: 24px;font-weight: normal;}
 .list .item p{line-height: 30px;margin-top: 10px}
 </style>
+    <script src="//cdn.bootcss.com/avalon.js/1.5.5/avalon.js"></script>
+    <!--<script src="/static/avalon/js/avalon.js"></script>-->
+    <script>
+        avalon.define({
+            $id: "test",
+            name: "司徒正美"
+        })
+    </script>
 </head>
-<body>
+<body ms-controller="test">
   <header>
     <div class="wrap">
       <h1>A New App Created By ThinkJS</h1>
     </div>
   </header>
+  <input ms-duplex-string="name">
+  <p>Hello,{{name}}!</p>
   <div class="content">
     <div class="list">
       <div class="item">
