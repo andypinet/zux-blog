@@ -31,3 +31,5 @@ output/
 output.tar.gz
 
 runtime/
+
+bower_components
